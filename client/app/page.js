@@ -57,8 +57,7 @@ export default function Chatbot() {
         <Image width={80} height={80} src={logo} className="w-11 md:w-20" alt="Logo"/>
       </div>
 
-
-        <div className="flex flex-col md:h-[80vh] h-[82vh]  text-white mt-3">
+        <div className="flex flex-col md:h-[80vh] h-[81vh]  text-white mt-3">
           {/* Chat Messages */}
           <div className="flex-grow overflow-y-auto space-y-4 p-4 border border-gray-700 rounded-lg bg-[#1E293B] custom-scrollbar">
             {
