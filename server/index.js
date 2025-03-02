@@ -1,5 +1,4 @@
 require('dotenv').config();
-
 const express = require('express');
 const app = express();
 const cors = require('cors');
@@ -17,7 +16,6 @@ app.use('/chat',gemini);
 app.get('/', (req, res) => {
     res.send("Hello World! This is Muntasir's World!");
 });
-
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
 });
