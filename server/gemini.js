@@ -29,6 +29,8 @@ const generationConfig = {
 router.post('/', async (req, res) => {
   try {
     const { input } = req.body;
+    console.log('johfa');
+    
 
     if (!input) {
       return res.status(400).json({ error: "Input is required" });
