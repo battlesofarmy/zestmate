@@ -22,7 +22,7 @@ export default function Chatbot() {
 
     try {
       // const { data } = await axios.post("http://localhost:5000/chat", {
-      const { data } = await axios.post("https://chat.muntasir3301.xyz/chat", {
+      const { data } = await axios.post("https://zestmate-server.vercel.app", {
         input,
       });
 
