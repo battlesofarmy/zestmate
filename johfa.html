@@ -21,6 +21,7 @@
             font-size: 30px;
             cursor: pointer;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 100
         }
 
         /* Chat Window */
@@ -28,42 +29,38 @@
             position: fixed;
             bottom: 85px;
             right: 20px;
-            width: 400px;
-            height: 500px;
+            width: 380px;
+            height: 68vh;
             background: white;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
             display: none;
             flex-direction: column;
-            border-radius: 10px
+            border-radius: 10px;
+            z-index: 100
         }
         @media only screen and (max-width: 700px) {
             .chat-window {
                 bottom: 85px;
                 right: 20px;
-                width: 300px;
-                height: 550px;
+                width: 90vw;
+                height: 65vh;
             }
 
             .zestmate-chat-icon {
-                width: 40px;
-                height: 40px;
+                width: 55px;
+                height: 55px;
             }
         }
 
-        #askai-zestmate{
-            padding: 18px 12px;
-            background-color: blue;
-            color: white;
-            display: flex;
-            justify-content: center;
-            width: 100px;
+
+        #ask-zestmate{
             cursor: pointer;
-            margin-left: auto;
         }
+
+
     </style>
 </head>
 <body>
-    <button id="askai-zestmate">Ask AI</button>
 
     <!-- Chat Icon -->
     <div class="zestmate-chat-icon" onclick="toggleChat()">
@@ -104,20 +101,13 @@
             }
         }
 
-        document.getElementById("askai-zestmate")?.addEventListener("click", function() {
-            console.log('Hello johfa');
-        });
 
 
 
-
-
-
-
-        document.getElementById("askai-zestmate")?.addEventListener("click", function() {
-            console.log('Hello johfa');
+        document.getElementById("ask-zestmate")?.addEventListener("click", function() {
             var chatWindow = document.getElementById("chatWindow");
             var chatIcon = document.querySelector(".zestmate-chat-icon");
+            console.log('Hello johfa');
 
             // Toggle chat window visibility
             if (chatWindow.style.display === "none" || chatWindow.style.display === "") {

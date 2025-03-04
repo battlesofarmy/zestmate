@@ -14,14 +14,12 @@ export default function Chatbot() {
     if (!input.trim()) return;
     setInput("");
 
-    // johfa 
-
     // Append user message
     const userMessage = { role: "user", text: input };
     setMessages((prev) => [...prev, userMessage]);
 
     try {
-      // const { data } = await axios.post(/"http://localhost:5000/chat", {
+      // const { data } = await axios.post("http://localhost:5000/chat", {
       // const { data } = await axios.post("https://chat.muntasir3301.xyz/chat", {
       const { data } = await axios.post("https://zestmate-server.vercel.app/chat", {
         input,
@@ -58,7 +56,7 @@ export default function Chatbot() {
         <Image width={80} height={80} src={logo} className="w-11 md:w-20" alt="Logo"/>
       </div>
 
-        <div className="flex flex-col md:h-[80vh] h-[80vh]  text-white mt-3">
+        <div className="flex flex-col md:h-[80vh] h-[75vh]  text-white mt-3">
           {/* Chat Messages */}
           <div className="flex-grow overflow-y-auto space-y-4 p-4 border border-gray-700 rounded-lg bg-[#1E293B] custom-scrollbar">
             {
