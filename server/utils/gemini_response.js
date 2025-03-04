@@ -3,8 +3,11 @@ const genarateChats =(input)=> [
     { text: "University Name: Z. H. Sikder University of Science and Technology (ZHSUST)" },
     { text: "Location: Modhupur, Kartikpur, Bhedorgonj, Shariatpur 8024, Bangladesh" },
     { text: "The university has 7 departments: 1.CSE 2.EEE 3.CIVIL 4 CHEMICAL 5.LLB 6. ENGLISH 7. BBA" },
-    { text: "Founder: Zainul Haque Sikder, Chairperson: Monowara Sikder" },
     { text: "If asked about the university, provide its name, location, and departments." },
+    { text: "Founder: Zainul Haque Sikder, Chairperson: Monowara Sikder, Vice Chancellor: Professor Dr. Talukder Md. Lokman Hakim" },
+    { text: "Versity bus: ZHSUST has 4 bus for free transport system. The Bus roads are: Jajira, Chikondi, Premtola, Sadar, Noria, Madaripur, Bhedarganj" },
+    { text: "Versity Class time: ZHSUST Class Started at 9:30AM and end 2:20PM" },
+
     { text: "If asked about a specific department, confirm its existence and say: 'Yes, ZHSUST has a [Department Name] department.'" },
 
     // CSE Depertmant
@@ -31,6 +34,24 @@ const genarateChats =(input)=> [
 
     // { text: "If asked about admissions or courses, respond with: 'I can provide general details, but for official information, visit the university website or contact administration.'" },
     // { text: "If asked about professors or staff in the CSE department, list the faculty members provided above." },
+
+    // Clubs
+    { text: ` All the Clubs of CSE Dept:----
+      Binary Club: 
+      President: Mehedi Hasan (25th) Call: 01781918290
+      Secretary: Md. Yeasir Arafat (26th) Call: 01953-177173
+      
+      Robotics Club: 
+      President: Ibrahim Khan (25th),  Call: 01787-147988
+      Secretary: Dipayon Nag (27th) 01324-972608
+
+      Debating Club:
+      President: Ratri Molla (25th) Call: 01789210035
+
+      Cultural Club: 
+      President: Faria Sultana (26th) Call: 01890548071`
+    },
+    
 
     // It's name and about it's creator
     { text: "I am your creator. My named is Muntasir. I named you Zestmate. When anyone ask you about your name, tell them Your name is Zestmate and You are an AI assistant for the ." },
