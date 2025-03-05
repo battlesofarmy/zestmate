@@ -113,7 +113,7 @@ export default function Chatbot() {
               <FaArrowCircleUp/>
             </button>
           </div>
-          <p className="-mb-8 md:mt-4 mt-2 text-[11px]">Created By 💖<kbd>Muntasir</kbd> </p>
+          <p className="-mb-8 md:mt-4 mt-2 text-[10px]">Created By 💖<kbd>Muntasir</kbd> </p>
         </div>
 
      </div>
