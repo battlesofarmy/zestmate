@@ -9,6 +9,8 @@ import Image from "next/image";
 export default function Chatbot() {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
+  const [loading, setLoading] = useState(false); // ✅ Loader state
+
 
   const sendMessage = async () => {
     if (!input.trim()) return;
@@ -17,6 +19,7 @@ export default function Chatbot() {
     // Append user message
     const userMessage = { role: "user", text: input };
     setMessages((prev) => [...prev, userMessage]);
+    setLoading(true); 
 
     try {
       // const { data } = await axios.post("http://localhost:5000/chat", {
@@ -33,6 +36,8 @@ export default function Chatbot() {
         ...prev,
         { role: "bot", text: "Error: Unable to get a response." },
       ]);
+    }finally{
+      setLoading(false);
     }
 
   };
@@ -93,6 +98,16 @@ export default function Chatbot() {
               </div>
             )
             }
+
+{loading && ( // ✅ Show loading message
+              <div className="flex max-w-lg">
+                <div className="bg-gray-600 p-3 py-[10px] rounded-lg animate-pulse">
+                  Thinking...
+                </div>
+              </div>
+            )}
+
+            
           </div>
           
           {/* Send button option  */}
