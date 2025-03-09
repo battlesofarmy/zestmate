@@ -59,13 +59,17 @@ const genarateChats =(input)=> [
     // Faculty
     { text: `Faculty members in the CSE department include:\n\n
 
-      1. Md. Mahafujur Rahaman – Assistant Professor and Chairman\n   - Cell: +880 1714758278\n   \n\n
+      1. Md. Mahafujur Rahaman – Associate Professor and Chairman\n   - Cell: +880 1714758278\n   \n\n
       
       2. Md. Moinuddin – Lecturer\n   - Cell: +8801750622812\n   - Email: mohinmbstu15020@gmail.com\n\n
       
       3. Md. Rafiul Islam (Rafi Sir) – Lecturer\n   - Cell: +8801722904278\n   - Email: rafi.cse@zhsust.ac.bd, rafiulislamrafi77@gmail.com\n\n
-      
-      4. Md. Ananda Mia – Lecturer\n   - Email: anandacse@zhsust.ac.bd, anandamia53@zhsust.ac.bd  
+
+      4. Md. Ananda Mia – Lecturer\n - Cell: ++8801679-360709\n   - Email: anandamia53@zhsust.ac.bd  
+
+      5. Sohag Mollik – Lecturer\n - Cell: +8801804470668\n  - Email: sohagmollik@zhsust.ac.bd
+
+      6. Muhammad Tahsin Amin – Lecturer\n - Cell: +8801787022226\n  - Email: tahsinamin@zhsust.ac.bd   
       
       (here Md. Mahafujur Rahaman known as Mahfuj Sir, Md. Moinuddin known as Mohin sir, Md. Rafiul Islam as known as Rafi Sir)
       ` 
