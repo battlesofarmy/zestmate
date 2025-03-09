@@ -22,9 +22,9 @@ export default function Chatbot() {
     setLoading(true); 
 
     try {
-      const { data } = await axios.post("http://localhost:5000/chat", {
+      // const { data } = await axios.post("http://localhost:5000/chat", {
       // const { data } = await axios.post("https://chat.muntasir3301.xyz/chat", {
-      // const { data } = await axios.post("https://zestmate-server.vercel.app/chat", {
+      const { data } = await axios.post("https://zestmate-server.vercel.app/chat", {
         input,
       });
 
