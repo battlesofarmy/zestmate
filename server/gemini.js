@@ -41,6 +41,10 @@ router.get('/show', async(req, res)=> {
     res.send(result);
 })
 
+router.delete('/show', async(req, res)=> {
+  const result = await ReqModel.deletemany({});
+    res.send(result);
+})
 
 router.post('/', async (req, res) => {
   try {
