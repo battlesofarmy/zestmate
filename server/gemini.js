@@ -36,6 +36,11 @@ mongoose.connect(uri)
 .catch((err)=> console.log("Connection Error on mongodb"))
 
 
+router.get('/show', async(req, res)=> {
+  const result = await ReqModel.find({}, {_id: 0});
+    res.send(result);
+})
+
 
 router.post('/', async (req, res) => {
   try {
