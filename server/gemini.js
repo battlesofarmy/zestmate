@@ -1,6 +1,10 @@
+require('dotenv').config();
 const express = require('express');
 const router = express.Router();
 const genarateChats = require('./utils/gemini_response');
+const mongoose = require('mongoose');
+const uri = process.env.URI;
+const ReqModel = require('./schemas/requestSchemaModel');
 
 const {
   GoogleGenerativeAI,
@@ -26,10 +30,19 @@ const generationConfig = {
 };
 
 
+
+mongoose.connect(uri)
+.then(()=> console.log("MongoDb Conneted Successfully"))
+.catch((err)=> console.log("Connection Error on mongodb"))
+
+
+
 router.post('/', async (req, res) => {
   try {
     const { input } = req.body;
-    console.log('johfa');
+
+    await ReqModel({message: input}).save();
+    // console.log(input)
     
 
     if (!input) {
