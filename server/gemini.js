@@ -37,13 +37,27 @@ mongoose.connect(uri)
 
 
 router.get('/show', async(req, res)=> {
-  const result = await ReqModel.find({}, {_id: 0});
-    res.send(result);
+  try{
+    const result = await ReqModel.find({}, {_id: 0});
+    res.status(200).send(result);
+  }catch(error){
+    res.status(500).send(error);
+  }
 })
 
 router.delete('/show', async(req, res)=> {
-  const result = await ReqModel.deletemany({});
-    res.send(result);
+  try {
+
+ mongoose.connect(uri)
+.then(()=> console.log("MongoDb Conneted Successfully"))
+.catch((err)=> console.log("Connection Error on mongodb"))
+
+
+    const result = await ReqModel.deleteMany({});
+    res.json({ message: "All documents deleted", deletedCount: result.deletedCount });
+  } catch (error) {
+    res.status(500).json({ error: "Internal Server Error" });
+  }
 })
 
 router.post('/', async (req, res) => {
